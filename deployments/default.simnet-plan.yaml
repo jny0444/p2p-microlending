@@ -84,6 +84,11 @@ plan:
     - id: 2
       transactions:
         - emulated-contract-publish:
+            contract-name: lp-token-v1_0_0
+            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            path: contracts/lp-token-v1_0_0.clar
+            clarity-version: 3
+        - emulated-contract-publish:
             contract-name: mock-token-v0_0_1
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             path: contracts/mock-token-v0_0_1.clar
@@ -92,6 +97,11 @@ plan:
             contract-name: mzusd-v1_0_0
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             path: contracts/mzusd-v1_0_0.clar
+            clarity-version: 3
+        - emulated-contract-publish:
+            contract-name: microlending-v1_0_0
+            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            path: contracts/microlending-v1_0_0.clar
             clarity-version: 3
         - emulated-contract-publish:
             contract-name: mzusd-engine-v1_0_0

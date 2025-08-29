@@ -10,10 +10,20 @@ contract_id = 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standa
 
 [[project.requirements]]
 contract_id = 'ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT.sbtc-token'
+[contracts.lp-token-v1_0_0]
+path = 'contracts/lp-token-v1_0_0.clar'
+clarity_version = 3
+epoch = 'latest'
+
+[contracts.microlending-v1_0_0]
+path = 'contracts/microlending-v1_0_0.clar'
+clarity_version = 3
+epoch = '3.2'
+
 [contracts.mock-token-v0_0_1]
 path = 'contracts/mock-token-v0_0_1.clar'
 clarity_version = 3
-epoch = 'latest'
+epoch = '3.2'
 
 [contracts.mzusd-engine-v1_0_0]
 path = 'contracts/mzusd-engine-v1_0_0.clar'
