@@ -1,0 +1,83 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - requirement-publish:
+            contract-id: SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard
+            remap-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            remap-principals:
+              SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 8400
+            path: "./.cache/requirements/SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.clar"
+            clarity-version: 1
+      epoch: "2.0"
+    - id: 1
+      transactions:
+        - requirement-publish:
+            contract-id: ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT.sbtc-registry
+            remap-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            remap-principals:
+              ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 112090
+            path: "./.cache/requirements/ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT.sbtc-registry.clar"
+            clarity-version: 3
+        - requirement-publish:
+            contract-id: ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT.sbtc-token
+            remap-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            remap-principals:
+              ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 47600
+            path: "./.cache/requirements/ST1F7QA2MDF17S807EPA36TSS8AMEFY4KA9TVGWXT.sbtc-token.clar"
+            clarity-version: 3
+      epoch: "3.1"
+    - id: 2
+      transactions:
+        - contract-publish:
+            contract-name: lp-token-v1_0_0
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 18420
+            path: contracts/lp-token-v1_0_0.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: mock-token-v0_0_1
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 18500
+            path: contracts/mock-token-v0_0_1.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: mzusd-v1_0_0
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 14770
+            path: contracts/mzusd-v1_0_0.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: microlending-v1_0_0
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 59580
+            path: contracts/microlending-v1_0_0.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: mzusd-engine-v1_0_0
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 65010
+            path: contracts/mzusd-engine-v1_0_0.clar
+            anchor-block-only: true
+            clarity-version: 3
+        - contract-publish:
+            contract-name: mzusd-engine-v1_1_0
+            expected-sender: ST3J2X81CCA3JFX6HKM10FCJFXT9PW4E7DMQG1D49
+            cost: 33700
+            path: contracts/mzusd-engine-v1_1_0.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
